@@ -1,0 +1,108 @@
+body .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: rgb(97, 7, 7);
+}
+
+.btn-custom {
+  background-color: rgb(33, 223, 33);
+  color: rgb(97, 7, 7);
+}
+.btn-custom:hover {
+  background-color: rgb(97, 7, 7);
+  color: rgb(33, 223, 33);
+}
+
+body .main {
+  width: 100%;
+}
+body .main.new {
+  background: blue;
+  height: 100vh;
+}
+body .main .container .newSection {
+  height: 20px;
+  width: 20px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  right: unset;
+  color: white;
+  font-size: 5px;
+  background-color: black;
+}
+
+div.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+@keyframes example2 {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+@keyframes example3 {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: blue;
+  }
+}
+@media screen and (max-width: 991px) {
+  body {
+    background-color: blue;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    background-color: blue;
+  }
+}
+@media screen and (max-width: 562px) {
+  body {
+    background-color: blue;
+  }
+}
+@media screen and (max-width: 448px) {
+  body {
+    background-color: blue;
+  }
+}
+@media screen and (max-width: 448px) and (min-width: 200px) {
+  body {
+    background-color: blue;
+  }
+}/*# sourceMappingURL=main.css.map */

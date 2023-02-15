@@ -1,0 +1,136 @@
+$green: rgb(33, 223, 33);
+$darkRed: rgb(97, 7, 7);
+
+
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin box($height ,$width){
+   height:$height;
+   width: $width;
+}
+
+
+@mixin position($position , $top , $left , $right){
+    position: $position;
+    top: $top;
+    left: $left;
+    right:$right
+}
+
+
+body{
+    background-color: $darkRed;
+    // color: $green;
+}
+
+
+.btn-custom{
+    background-color: $green;
+    color:$darkRed;
+    &:hover{
+        background-color: $darkRed;
+        color:$green;
+    }
+}
+
+body{
+    .main{
+        @extend %center;
+        width: 100%;
+        &.new{
+         background: blue;   
+         height: 100vh;
+        }
+        .container{
+            .newSection{
+                @include box(20px , 20px);
+                @include position(fixed, 10px , 10px , unset);
+                color:white;
+                font-size: 5px;
+                background-color: black;
+            }
+        }
+    }
+}
+
+
+div.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count:infinite;
+  }
+  
+  @keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+  @keyframes example2 {
+    from   {background-color: red;}
+    to  {background-color: yellow;}
+  }
+
+  @keyframes example3 {
+    0%   {background-color: red;}
+    100%  {background-color: yellow;}
+  }
+
+
+
+//   @media screen and (min-width: 480px) {
+//     body {
+//       background-color: lightgreen;
+//     }
+//   }
+
+  
+  @media screen and (max-width: 1200px) {
+    body {
+      background-color: blue;
+    }
+  }
+
+
+  @media screen and (max-width: 991px) {
+    body {
+      background-color: blue;
+    }
+  }
+
+
+  @media screen and (max-width: 767px) {
+    body {
+      background-color: blue;
+    }
+  }
+
+
+  @media screen and (max-width: 562px) {
+    body {
+      background-color: blue;
+    }
+  }
+
+  @media screen and (max-width: 448px) {
+    body {
+      background-color: blue;
+    }
+  }
+
+
+  @media screen and (max-width: 448px) and (min-width:200px) {
+    body {
+      background-color: blue;
+    }
+  }
+
